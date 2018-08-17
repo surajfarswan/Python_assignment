@@ -31,3 +31,10 @@ print("{} company offers a course of {} only for {} Rs".format(s,course,fees))
 name = 'Tony Stark'
 sal = 1000000
 print(('%s " %d')%(name,sal))
+
+# area of circle
+
+r = int(input('Enter radius of circle: '))
+pi = 3.14
+a = pi*r*r
+area = print('Area of circle is: ',a)

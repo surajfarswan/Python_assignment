@@ -1,11 +1,4 @@
-
-# coding: utf-8
-
 # # Reverse the list
-
-# In[4]:
-
-
 l1 = []
 n = int(input('Enter number of elemnets: '))
 for i in range(0,n):
@@ -14,32 +7,20 @@ for i in range(0,n):
 l1.reverse()
 print(l1)
 
-
 # # Print all uppercase letters from a string
-
-# In[9]:
-
 
 Str = input('Enter string: ')
 for i in Str:
     if i>= "A" and i<="Z":
         print(i,end=" ")
 
-
 # # Split the user input on comma's and store the values in a list as integers.
-
-# In[32]:
-
 
 a = input('Enter string: ')
 b = a.split()
 print(','.join(b))
 
-
 # # Pallindromic String or not
-
-# In[11]:
-
 
 Str = input('Enter string: ')
 Str1 = reversed(Str)
@@ -48,11 +29,7 @@ if list(Str) == list(Str1):
 else:
     print('Not a pallindromic string.')
 
-
 # # Make deepcopy of list and write d/w b/w shallow and deep copy
-
-# In[12]:
-
 
 import copy as cp
 l1 = [1,2,3,[4,5,6]]

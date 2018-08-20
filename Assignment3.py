@@ -66,6 +66,15 @@ print('Number of odd numbers: ',c_odd)
 
 # TUPLES
 
+# print tuple in reverse order
+t = (1,2,3,4,5)
+print(t[::-1])
+
+# largest and smallest element in tuple
+t = (1,2,3,4,5)
+print('Maximum element: ',max(t))
+print('Minimum element: ',min(t))
+
 # STRINGS
 
 # convert string to uppercase

@@ -2,7 +2,7 @@
 
 #Question 1
 
-'''class circle:
+class circle:
     def getArea(self,radius):
         print(3.14*radius*radius)
     def getCircumference(self,radius):
@@ -91,6 +91,7 @@ b = Tiger()
 print(b.animal_attribute())
 
 # Question 6
+
 #Incorrect code
 class A:
     def f(self):
@@ -103,12 +104,13 @@ class B(A):
 a = A()
 b = B()
 print a.f(), b.f()
-print a.g(), b.g()'''
+print a.g(), b.g()
+
 '''In above code there will be error in line 11, line 12 as brackets are missing'''
 
 # correct code will be:
 
-'''class A:
+class A:
     def f(self):
         return self.g()
     def g(self):
@@ -120,7 +122,8 @@ class B(A):
 a = A()
 b = B()
 print(a.f(), b.f())
-print(a.g(), b.g())'''
+print(a.g(), b.g())
+
 '''SO for the corrected code output will be
 A B
 A B'''
@@ -128,23 +131,23 @@ A B'''
 # Question 7
 
 class shape:
-    l = int(input('Enter length: '))
-    b = int(input('Enter breadth: '))
-
+    def __init__(self,l,b):
+        self.l = l
+        self.b = b
+        
     def area(self):
-        ar = self.l * self.b
-        print(ar)
+        return self.l * self.b
 
 class rectangle(shape):
-    def areas(self):
-        print('Area of rectangle: ')
+    def __init__(self,l,b):
+        super(rectangle,self).__init__(l,b)
 
 class square(shape):
-    def areas(self):
-        print('Area of square: ')
+    def __init__(self,l):
+        super(square,self).__init__(l,l)
 
-s = shape()
-sq = square()
-re = rectangle()
-sq.area()
-re.area()
+a = shape(3,6)
+b = rectangle(3,6)
+c = square(3)
+print('Area of rectangle: ',b.area())
+print('Area of square: ',c.area())

@@ -2,7 +2,7 @@
 
 # Question 1
 
-f = open('abc.txt','r')
+'''f = open('abc.txt','r')
 l = f.readlines()
 for i in l:
     print(i)
@@ -27,14 +27,22 @@ with open('abc.txt','r') as f:
 with open('abc.txt') as f:
     with open('new.txt') as g:
         for l1,l2 in zip(f,g):
-            print(l1+l2)
+            print(l1+l2)'''
 
 # Question 5
 
-f = open('a.txt')
-c = []
-for l in f:
-    c.append(int(l))
-c.sort()
-print(c)
-f.close()
+import random
+with open('r1.txt','w+') as f:
+    for i in range(10):
+        f.write(str(random.randint(0,9)))
+        f.write('\n')
+with open('r1.txt') as f1,open('r2.txt','w+') as f2:
+    l = []
+    for line in f1:
+        l.append(int(line.strip('\n')))
+    l = sorted(l)
+    for i in l:
+        f2.write(str(i)+'\n')
+with open('r2.txt') as f:
+    for i in f:
+        print(i.strip('\n'))

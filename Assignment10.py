@@ -2,7 +2,7 @@
 
 # Question 1
 
-'''f = open('abc.txt','r')
+f = open('abc.txt','r')
 l = f.readlines()
 for i in l:
     print(i)
@@ -27,7 +27,7 @@ with open('abc.txt','r') as f:
 with open('abc.txt') as f:
     with open('new.txt') as g:
         for l1,l2 in zip(f,g):
-            print(l1+l2)'''
+            print(l1+l2)
 
 # Question 5
 
